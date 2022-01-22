@@ -14,33 +14,35 @@ const Navbar = () => {
 
     return (
         <div className="navbar">
-            <div className="nav-links">
-                <div className="logo">
-                    <h1>Fud-Blog</h1>
+            <div className="navbar-container">
+                <div className="nav-links">
+                    <div className="logo">
+                        <h1>Fud-Blog</h1>
+                    </div>
+                    <div className="links">
+                        <Menu />
+                    </div>
                 </div>
-                <div className="links">
-                    <Menu />
-                </div>
-            </div>
-            
-            <div className="nav-menu">
-                <div className="notif-container">
-                    <RiNotification3Line color="#333" size={27} />
-                </div>
-                <div className="hambuger-container">
-                    {toggleMenu 
-                        ? <RiCloseLine color="#333" size={27} onClick={() => setToggleMenu(false)}/>
-                        : <RiMenu3Line color="#333" size={27} onClick={() => setToggleMenu(true)}/>
-                    }
-                    {
-                        toggleMenu && (
-                            <div className="menu-container scale-in-tr">
-                                <div className="menu-links">
-                                    <Menu />
+                
+                <div className="nav-menu">
+                    <div className="notif-container">
+                        <RiNotification3Line color="#333" size={27} />
+                    </div>
+                    <div className="hambuger-container">
+                        {toggleMenu 
+                            ? <RiCloseLine color="#333" size={27} onClick={() => setToggleMenu(false)}/>
+                            : <RiMenu3Line color="#333" size={27} onClick={() => setToggleMenu(true)}/>
+                        }
+                        {
+                            toggleMenu && (
+                                <div className="menu-container scale-in-tr">
+                                    <div className="menu-links">
+                                        <Menu />
+                                    </div>
                                 </div>
-                            </div>
-                        )
-                    }
+                            )
+                        }
+                    </div>
                 </div>
             </div>
         </div>
