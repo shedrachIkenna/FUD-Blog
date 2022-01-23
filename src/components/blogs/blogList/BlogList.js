@@ -1,4 +1,5 @@
-import BlogSummary from './BlogSummmary'
+import BlogSummary from '../blogSummary/BlogSummmary'
+import './bloglist.css'
 const BlogList = () => {
     return (
         <div className="blog-list">

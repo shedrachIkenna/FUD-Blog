@@ -1,4 +1,6 @@
-import BlogList from '../blogs/BlogList'
+import BlogList from '../blogs/blogList/BlogList'
+import './dashboard.css'
+
 const Dashboard = () => {
     return (
         <div className="dashboard">

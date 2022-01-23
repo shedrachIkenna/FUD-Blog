@@ -1,5 +1,5 @@
 import { RiTwitterLine, RiChat3Line, RiHeartLine, RiFacebookCircleFill, RiSnapchatLine, RiTelegramLine, RiCheckFill, RiUser3Line } from 'react-icons/ri'
-
+import './blogdetails.css'
 const BlogDetails = () => {
     return (
         <div className="blog-details-main">

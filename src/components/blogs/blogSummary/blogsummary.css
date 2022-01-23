@@ -1,0 +1,32 @@
+
+.blog-summary{
+    padding: 10px 16px;
+    margin: 0 auto;
+    border-bottom: 1px solid #d4d1d1;
+  }
+  
+  .blog-summary:hover{
+    box-shadow: 1px 3px 5px  #dad5d5;
+  }
+  
+  .blog-title {
+    font-size: 20px;
+    color: rgb(0,0,0);
+    margin-bottom: 12px;
+  }
+  
+  .blog-author{
+    color: rgb(120,127,134);
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+  
+  .blog-text{
+    color: rgb(120,127,134);
+    margin-bottom: 12px;
+  }
+  
+  .blog-date{
+    margin-bottom: 12px;
+    font-size: 11px;
+  }

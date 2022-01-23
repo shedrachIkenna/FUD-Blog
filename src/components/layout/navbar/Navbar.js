@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import { RiNotification3Line, RiMenu3Line, RiCloseLine } from 'react-icons/ri'
+import './navbar.css'
+
 
 const Menu = () => (
     <>
