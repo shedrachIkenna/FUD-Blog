@@ -1,11 +1,15 @@
 import BlogSummary from '../blogSummary/BlogSummmary'
 import './bloglist.css'
-const BlogList = () => {
+const BlogList = ({blogs}) => {
     return (
         <div className="blog-list">
-            <BlogSummary />
-            <BlogSummary />
-            <BlogSummary />
+            {
+               blogs && blogs.map(blog => {
+                   return(
+                       <BlogSummary blog={blog} key={blog.id}/>
+                   )
+               })
+            }
         </div>
     )
 }

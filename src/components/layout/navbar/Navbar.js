@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom'
 import { useState } from 'react'
 import { RiNotification3Line, RiMenu3Line, RiCloseLine } from 'react-icons/ri'
 import './navbar.css'
@@ -5,9 +6,9 @@ import './navbar.css'
 
 const Menu = () => (
     <>
-    <a href="#">Home</a>
-    <a href="#">Profile</a>
-    <a href="#">Log out</a>
+        <NavLink className="a" to="/home">Home</NavLink>
+        <NavLink className="a" to="/profile">Profile</NavLink>
+        <NavLink className="a" to="/signin">Log out</NavLink>
     </>
 )
 

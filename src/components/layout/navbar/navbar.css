@@ -64,13 +64,12 @@
   color: rgb(164,53,240);
   font-size: 35px;
 }
-
-.navbar a {
+ .a {
   margin-left: 16px;
   text-decoration: none;
   padding: 6px;
 }
-.navbar a:hover {
+.a:hover {
   color: rgb(164,53,240);
 }
 
@@ -101,13 +100,6 @@
 }
 
 @media screen and (max-width: 550px) {
-
-
-  .navbar {
-    padding: 10px;
-  }
-  
-  
   .links{
     display: none;
   }
