@@ -12,7 +12,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* max-width: 966px; */
     padding: 20px 0;
 }
 
@@ -25,8 +24,14 @@
     color: #fff;
   }
 
+  .btn:hover{
+    background-color: rgb(152, 66, 209);
+  }
+
   .btn:disabled{
-      background-color: red;
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
   }
 
   .create-blog-body{
@@ -41,6 +46,7 @@
       font-size: 25px;
       border: none;
       resize: none;
+      overflow: hidden;
   }
 
   #title:focus{
@@ -53,6 +59,7 @@
       padding: 15px 0;
       border: none;
       resize: none;
+      overflow: hidden;
   }
 
   #content:focus{

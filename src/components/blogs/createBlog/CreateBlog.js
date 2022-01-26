@@ -1,7 +1,9 @@
 import './createblog.css'
 import { useState } from 'react'
+import { createBlog } from '../../../store/actions/BlogActions'
+import { connect } from 'react-redux'
 
-const CreateBlog = () => {
+const CreateBlog = (props) => {
     const [title, setTitle] = useState('')
     const [content, setContent] = useState('')
 
@@ -9,7 +11,8 @@ const CreateBlog = () => {
 const handleClick = (e) => {
     e.preventDefault();
     const blog = { title, content };
-    console.log(blog)
+    console.log(props)
+    props.addProject(blog)
 }
 
 
@@ -34,4 +37,10 @@ const handleClick = (e) => {
     )
 }
 
-export default CreateBlog;
+const mapDispatchToProps = (dispatch) => {
+    return{
+        addProject : (blog) => dispatch(createBlog(blog))
+    }
+}
+
+export default connect(null, mapDispatchToProps)(CreateBlog);
