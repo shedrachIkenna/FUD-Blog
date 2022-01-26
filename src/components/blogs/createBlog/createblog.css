@@ -25,6 +25,10 @@
     color: #fff;
   }
 
+  .btn:disabled{
+      background-color: red;
+  }
+
   .create-blog-body{
       width: 100%;
       padding: 20px 0;
@@ -36,16 +40,19 @@
       margin-bottom: 15px;
       font-size: 25px;
       border: none;
+      resize: none;
   }
 
   #title:focus{
       outline: none;
   }
 
+
   #content{
       width: 100%;
       padding: 15px 0;
       border: none;
+      resize: none;
   }
 
   #content:focus{
