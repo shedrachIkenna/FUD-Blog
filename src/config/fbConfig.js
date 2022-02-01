@@ -1,17 +1,20 @@
+import firebase from "firebase/app";
+import "firebase/firestore";
+import "firebase/auth";
 
-import { initializeApp } from "firebase/app";
-import { 
-    getFirestore,
-    collection,
-    getDoc,
-    doc,
-    addDoc,
-    setDoc,
-    updateDoc
-} from 'firebase/firestore'
+// import { initializeApp } from "firebase/app";
+// import { 
+//     getFirestore,
+//     collection,
+//     getDoc,
+//     doc,
+//     addDoc,
+//     setDoc,
+//     updateDoc
+// } from 'firebase/firestore'
 // import { getAnalytics } from "firebase/analytics";
 
-const firebaseConfig = {
+var firebaseConfig = {
   apiKey: "AIzaSyBULnjdRPi5dx270drM_taxNktnEFRxzFI",
   authDomain: "fud-blog-5778f.firebaseapp.com",
   projectId: "fud-blog-5778f",
@@ -22,14 +25,20 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-export const firebase = initializeApp(firebaseConfig);
-export { 
-    getFirestore,
-    collection,
-    getDoc,
-    doc,
-    addDoc,
-    setDoc,
-    updateDoc
-}
+// const firebase = initializeApp(fbConfig);
+// export const db = getFirestore(firebase)
+
+firebase.initializeApp(firebaseConfig);
+firebase.firestore();
+
+// export { 
+//     getFirestore,
+//     collection,
+//     getDoc,
+//     doc,
+//     addDoc,
+//     setDoc,
+//     updateDoc
+// }
 // const analytics = getAnalytics(app);
+export default firebase

@@ -7,11 +7,13 @@ import RootReducer from './store/reducers/RootReducer'
 import { Provider } from 'react-redux'
 import thunk from 'redux-thunk'
 import { getFirebase, ReactReduxFirebaseProvider } from 'react-redux-firebase'
-import { firebase } from './config/fbConfig'
+import  firebase  from './config/fbConfig'
 import { createFirestoreInstance } from 'redux-firestore'
 
-
-const store = createStore(RootReducer, applyMiddleware(thunk.withExtraArgument({ getFirebase })));
+const store = createStore(RootReducer, 
+    applyMiddleware(thunk.withExtraArgument({ getFirebase })),
+    
+);
 const rrfProps = {
   firebase,
   config: {},
@@ -22,7 +24,7 @@ const rrfProps = {
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <ReactReduxFirebaseProvider { ...rrfProps }>
+      <ReactReduxFirebaseProvider {...rrfProps}>
         <App />
       </ReactReduxFirebaseProvider>
     </Provider>
