@@ -45,7 +45,7 @@
 
 
 .navbar-container {
-  padding: 1rem;
+  padding: 1rem 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -65,7 +65,7 @@
   font-size: 35px;
 }
  .a {
-  margin-left: 16px;
+  margin-right: 1rem;
   text-decoration: none;
   padding: 6px;
 }
@@ -104,9 +104,14 @@
     display: none;
   }
 
+  .navbar h1 {
+    font-size: 26px;
+  }
+
   .nav-menu{
     display: flex;
-    padding-top: 10px;
+    padding-top:  7px;
+    margin: 5px;
   }
 
   .navbar svg{

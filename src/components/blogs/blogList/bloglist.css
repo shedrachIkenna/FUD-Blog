@@ -1,3 +1,10 @@
+
+.blog-list{
+    border-right: 1px solid #d4d1d1;
+    border-left: 1px solid #d4d1d1;
+    flex: 6;
+}
+
 .link{
     text-decoration: none;
 }

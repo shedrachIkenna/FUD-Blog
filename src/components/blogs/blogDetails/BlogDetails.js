@@ -25,7 +25,7 @@ const BlogDetails = (props) => {
                             <p className="blog-details-author">Shedrach Ikenna - 20th Sept, 2022</p>
                         </div>
                         <div className="blog-details-socials">
-                            <button className="blog-details-btn">Connect</button>
+                            <button className="btn">Connect</button>
                         </div>
                     </div>
                     <p className="blog-details-text">{blog.content}</p>

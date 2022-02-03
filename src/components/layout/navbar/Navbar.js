@@ -8,7 +8,7 @@ const Menu = () => (
     <>
         <NavLink className="a" to="/home">Home</NavLink>
         <NavLink className="a" to="/profile">Profile</NavLink>
-        <NavLink className="a" to="/signin">Log out</NavLink>
+        <NavLink className="btn" to="/signin">Log in</NavLink>
     </>
 )
 

@@ -1,4 +1,5 @@
 import BlogList from '../blogs/blogList/BlogList'
+import Board from '../board/Board'
 import './dashboard.css'
 import { connect } from 'react-redux'
 import { compose } from 'redux'
@@ -8,6 +9,7 @@ const Dashboard = ({blogs}) => {
     return (
         <div className="dashboard">
             <BlogList blogs={blogs}/>
+            <Board />
         </div>
     )
 }
