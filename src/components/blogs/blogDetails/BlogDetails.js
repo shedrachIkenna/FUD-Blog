@@ -32,15 +32,15 @@ const BlogDetails = (props) => {
                 </div>
                 <div className="blog-details-links">
                     <div className="blog-details-reaction">
-                        <RiCheckFill size={27}/>
-                        <RiHeartLine size={27}/>
-                        <RiChat3Line size={27}/>
+                        <RiCheckFill size={27} className="good"/>
+                        <RiHeartLine size={27} className="love"/>
+                        <RiChat3Line size={27} className="comment"/>
                     </div>
                     <div className="blog-details-socials">
-                        <RiTwitterLine size={27}/>
-                        <RiFacebookCircleFill size={27}/>
-                        <RiSnapchatLine size={27}/>
-                        <RiTelegramLine size={27}/>
+                        <RiTwitterLine size={27} className="twitter"/>
+                        <RiFacebookCircleFill size={27} className="facebook"/>
+                        {/* <RiSnapchatLine size={27} className="snapchat"/> */}
+                        <RiTelegramLine size={27} className="telegram"/>
                     </div>
                 </div>
             </div>

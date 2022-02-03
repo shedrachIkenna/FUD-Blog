@@ -4,3 +4,9 @@
     margin: 10px auto;
     padding: 20px 0;
   }
+
+  @media screen and (max-width: 550px) {
+    .dashboard{
+      padding: 0;
+    }
+  }
