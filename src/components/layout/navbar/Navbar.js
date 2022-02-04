@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom'
-import { useState } from 'react'
-import { RiNotification3Line, RiMenu3Line, RiCloseLine } from 'react-icons/ri'
+import { useState, useRef } from 'react'
+import { RiNotificationBadgeLine, RiDraftLine, RiArrowRightLine } from 'react-icons/ri'
 import './navbar.css'
 
 
@@ -26,30 +26,71 @@ const Navbar = () => {
                         <Menu />
                     </div>
                 </div>
-                
-                <div className="nav-menu">
-                    <div className="notif-container">
-                        <RiNotification3Line color="#333" size={27} />
+
+        <NavLink className="round-btn" to="/" onClick={() => setToggleMenu(true)}>S</NavLink>
+
+        {
+            toggleMenu && (
+                <div className="nav-menu slide-in-right">
+                    <div className="menu-header menu-links">
+                        <NavLink className="fud" to="/">FUD</NavLink>
+                        <NavLink className="x" to="/" onClick={() => setToggleMenu(false)}><RiArrowRightLine/></NavLink>
                     </div>
-                    <div className="hambuger-container">
-                        {toggleMenu 
-                            ? <RiCloseLine color="#333" size={27} onClick={() => setToggleMenu(false)}/>
-                            : <RiMenu3Line color="#333" size={27} onClick={() => setToggleMenu(true)}/>
-                        }
-                        {
-                            toggleMenu && (
-                                <div className="menu-container scale-in-tr">
-                                    <div className="menu-links">
-                                        <Menu />
-                                    </div>
-                                </div>
-                            )
-                        }
-                    </div>
+                    <NavLink to="/">
+                        <div className="menu-user menu-links">
+                            <NavLink className="user-logo" to="/">S</NavLink>
+                            <div className="menu-user-name">
+                                <p>Shedrach Ikenna</p>
+                                <p>Shedrach686@gmail.com</p>
+                            </div>
+                        </div>
+                    </NavLink>
+                    <NavLink to="/">
+                        <div className="menu-user menu-links">
+                            <NavLink className="user-logo" to="/"><RiNotificationBadgeLine/></NavLink>
+                            <div className="menu-user-name">
+                                <p>Notice Board</p>
+                            </div>
+                        </div>
+                    </NavLink>
+                    <NavLink to="/">
+                        <div className="menu-user menu-links">
+                            <NavLink className="user-logo" to="/"><RiDraftLine/></NavLink>
+                            <div className="menu-user-name">
+                                <p>Write Article</p>
+                            </div>
+                        </div>
+                    </NavLink>
+                    <NavLink to="/">
+                        <div className="menu-user menu-links">
+                            <NavLink className="user-logo" to="/"><RiDraftLine/></NavLink>
+                            <div className="menu-user-name">
+                                <p>Settings</p>
+                            </div>
+                        </div>
+                    </NavLink>
+                    <NavLink to="/">
+                        <div className="menu-user menu-links">
+                            <p>Settings</p>
+                        </div>
+                    </NavLink>
+                    <NavLink to="/">
+                        <div className="menu-user menu-links">
+                            <p>Report</p>
+                        </div>
+                    </NavLink>
+                    <NavLink to="/">
+                        <div className="menu-user menu-links">
+                            <p>Sign out</p>
+                        </div>
+                    </NavLink>
                 </div>
+            )
+        }
             </div>
         </div>
     )
 }
 
 export default Navbar 
+

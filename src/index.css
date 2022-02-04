@@ -8,6 +8,7 @@
   color: #333;
   box-sizing: border-box;
   padding: 0;
+  overflow: hidden;
 }
 
 html {
@@ -30,12 +31,13 @@ body {
 
 .btn{
   background-color: rgb(164,53,240);
-  padding: 6px 20px;
+  padding: 6px 10px;
   border: none;
   border-radius: 25px;
   font-size: 18px;
   color: #fff;
   text-decoration: none;
+  max-width: 100px;
 }
 
 

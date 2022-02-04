@@ -2,3 +2,9 @@
 .board{
     flex: 4;
 }
+
+@media screen and (max-width: 550px) {
+    .board{
+     display: none;
+    }
+  }

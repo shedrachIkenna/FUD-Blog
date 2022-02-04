@@ -9,7 +9,7 @@ const Dashboard = ({blogs}) => {
     return (
         <div className="dashboard">
             <BlogList blogs={blogs}/>
-            <Board />
+            <Board className="notice-board"/>
         </div>
     )
 }
