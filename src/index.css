@@ -1,43 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
-/* base styles */
-* {
-  margin: 0;
-  font-family: "Inter";
-  color: #333;
-  box-sizing: border-box;
-  padding: 0;
-  overflow: hidden;
-}
-
-html {
-  height: 100%;
-  box-sizing: border-box;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
-body {
-  position: relative;
-  margin: 0;
-  padding-bottom: 6rem;
-  min-height: 100%;
-}
-
-.btn{
-  background-color: rgb(164,53,240);
-  padding: 6px 10px;
-  border: none;
-  border-radius: 25px;
-  font-size: 18px;
-  color: #fff;
-  text-decoration: none;
-  max-width: 100px;
-}
-
 
