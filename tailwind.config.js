@@ -3,7 +3,15 @@ module.exports = {
     './src/**/*.js',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        inter: ['Inter']
+      },
+      colors: {
+        tomato: '#ff6363',
+        primary: '#a435f0'
+      }
+    },
   },
   plugins: [],
 }

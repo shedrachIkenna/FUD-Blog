@@ -7,7 +7,7 @@ import CreateBlog from './components/blogs/createBlog/CreateBlog'
 const App = () => {
   return (
     <Router>
-      <div className="App">
+      <div className="App font-inter text-gray-600">
         <Navbar />
         <div className="content">
           <Routes>
