@@ -8,10 +8,11 @@ import Board from './components/board/Board'
 const App = () => {
   return (
     <Router>
+      <div className="max-w-screen-xl border-2 mx-auto">
       <div className="App font-inter text-gray-600 flex flex-col md:flex-row">
-      <div className="basis-1/4">
-        <Navbar />
-      </div>
+        <div className="basis-1/4 md:max-h-fit">
+          <Navbar />
+        </div>
         <div className="content basis-1/2">
           <Routes className="">
             <Route exact path='/' element={<Dashboard/>} />
@@ -22,6 +23,7 @@ const App = () => {
         <div className="basis-1/4">
           <Board />
         </div>
+      </div>
       </div>
     </Router>
   );
