@@ -4,10 +4,12 @@ import './dashboard.css'
 import { connect } from 'react-redux'
 import { compose } from 'redux'
 import { firestoreConnect } from 'react-redux-firebase'
+import DashHeader from './DashHeader'
 
 const Dashboard = ({blogs}) => {
     return (
         <div className="dashboard">
+            <DashHeader />
             <BlogList blogs={blogs}/>
             <Board className="notice-board"/>
         </div>
