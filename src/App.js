@@ -10,17 +10,17 @@ const App = () => {
     <Router>
       <div className="max-w-screen-xl border-2 mx-auto">
         <div className="App font-inter text-gray-600 flex flex-col md:flex-row">
-          <div className="basis-1/4">
+          <div className="basis-2/6 lg:basis-1/4">
             <Navbar />
           </div>
-          <div className="content basis-1/2">
+          <div className="content basis-4/6 lg:basis-1/2">
             <Routes className="">
               <Route exact path='/' element={<Dashboard/>} />
               <Route path='/blog/:id' element={<BlogDetails />} />
               <Route path='/create' element={<CreateBlog />} />
             </Routes>
           </div>
-          <div className="basis-1/4">
+          <div className="basis-1/4 hidden lg:block">
             <Board />
           </div>
         </div>

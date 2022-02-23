@@ -7,21 +7,22 @@ const Navbar = () => {
         menu.classList.toggle("hidden")
         console.log(menu)
     }
-
     return (
-        <div className="navbar md:overflow-auto md:h-screen">
-            <div className="flex md:flex-col w-full md:w-1/4 md:h-full justify-between p-3 md:p-0 fixed">
+        <div className="navbar md:overflow-auto md:h-screen w-full">
+            <div className="flex justify-between md:flex-col bg-white fixed top-0 w-full md:w-1/4 md:h-full px-3 py-4 md:p-0">
                 <div className="flex flex-row md:flex-col md:justify-between">
-                        <svg xmlns="http://www.w3.org/2000/svg" onClick = {handleToggle} className="h-6 w-6 pr-1 md:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <div className="flex items-center w-full md:border-b">
+                        <svg xmlns="http://www.w3.org/2000/svg" onClick = {handleToggle} className="h-9 w-9 pr-1 md:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                          </svg> 
-                    <h1 className="md:border-b font-bold text-2xl md:py-8 text-center md:text-left md:px-4">FUD-Blog</h1>
+                        </svg> 
+                        <h1 className="font-bold text-2xl md:py-8 text-center md:text-left px-1 md:px-4">FUD-Blog</h1>
+                    </div>
                     <div className="fixed w-full top-0 left-0 mt-16 md:mt-0 md:block md:relative">
-                        <div id="menu" className="hidden md:block p-5 md:p-2 bg-white shadow-xl md:shadow-none rounded-lg w-2/3 md:min-w-fit md:w-full">
+                        <div id="menu" className="hidden md:block p-5 md:p-0 bg-white shadow-xl md:shadow-none rounded-lg w-2/3 md:min-w-fit md:w-full">
                             <div className="px-1 mb-5 border-b pb-10 md:hidden">
                                 <NavLink to="/" className="flex flex-row items-center justify-center bg-primary px-3 py-2 rounded-lg shadow-xl">
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/>
                                     </svg>
                                     <span className="text-white pl-2 text-lg">Write</span>
                                 </NavLink>
@@ -66,16 +67,16 @@ const Navbar = () => {
                     </div>
                 </div>
                 <div className="flex flew-row justify-between md:flex-row md:items-center md:pb-6">
-                    <div className="pr-1 md:pr-0 md:pt-10">
+                    <div className="md:pr-0 md:pt-10">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-9 w-9 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
                         </svg>
                     </div>
-                    <div className="pr-1 relative md:mt-10">
+                    <div className="px-3 relative md:mt-10">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-9 w-9" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
                         </svg>
-                        <p className="absolute -right-0.5 -top-2 bg-tomato rounded-full px-1 py-0 text-white">6</p>
+                        <p className="absolute -right-0.3 -top-2.5 bg-tomato rounded-full px-1 py-0 text-white">6</p>
                     </div>
                     <div className="md:pt-10">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-9 w-9" viewBox="0 0 20 20" fill="currentColor">

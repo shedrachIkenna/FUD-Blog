@@ -10,7 +10,8 @@ module.exports = {
       colors: {
         tomato: '#ff6363',
         primary: '#a435f0',
-        darkbg: '#625a63'
+        darkbg: '#625a63',
+        myGrey: '#e8e8e8',
       }
     },
   },
