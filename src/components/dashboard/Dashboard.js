@@ -8,7 +8,7 @@ import DashHeader from './DashHeader'
 
 const Dashboard = ({blogs}) => {
     return (
-        <div className="dashboard">
+        <div className="dashboard md:mt-0 mt-16">
             <DashHeader />
             <BlogList blogs={blogs}/>
             <Board className="notice-board"/>

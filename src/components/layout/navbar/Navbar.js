@@ -10,7 +10,7 @@ const Navbar = () => {
 
     return (
         <div className="navbar md:overflow-auto md:h-screen">
-            <div className="flex md:flex-col h-full justify-between p-3 md:p-0">
+            <div className="flex md:flex-col w-full md:w-1/4 md:h-full justify-between p-3 md:p-0 fixed">
                 <div className="flex flex-row md:flex-col md:justify-between">
                         <svg xmlns="http://www.w3.org/2000/svg" onClick = {handleToggle} className="h-6 w-6 pr-1 md:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />

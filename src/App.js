@@ -10,7 +10,7 @@ const App = () => {
     <Router>
       <div className="max-w-screen-xl border-2 mx-auto">
         <div className="App font-inter text-gray-600 flex flex-col md:flex-row">
-          <div className="basis-1/4 md:max-h-screen">
+          <div className="basis-1/4">
             <Navbar />
           </div>
           <div className="content basis-1/2">
