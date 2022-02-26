@@ -10,10 +10,10 @@ const App = () => {
     <Router>
       <div className="max-w-screen-xl border-2 mx-auto">
         <div className="App font-inter text-gray-600 flex flex-col md:flex-row">
-          <div className="basis-2/6 lg:basis-1/4">
+          <div className="basis-2/6 w-full md:w-60 lg:basis-1/4 fixed">
             <Navbar />
           </div>
-          <div className="content basis-4/6 lg:basis-1/2">
+          <div className="content md:ml-60 md:w-2/3 basis-4/6 lg:basis-1/2">
             <Routes className="">
               <Route exact path='/' element={<Dashboard/>} />
               <Route path='/blog/:id' element={<BlogDetails />} />
