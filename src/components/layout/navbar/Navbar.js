@@ -8,10 +8,10 @@ const Navbar = () => {
         console.log(menu)
     }
     return (
-        <div className="navbar md:overflow-auto md:h-screen">
-            <div className="flex justify-between md:flex-col bg-white md:h-full px-3 py-4 md:p-0">
+        <div className="">
+            <div className="flex justify-between md:flex-col bg-white px-3 py-4 md:p-0">
                 <div className="flex flex-row md:flex-col md:justify-between">
-                    <div className="flex items-center w-full md:border-b">
+                    <div className="flex items-center md:border-b">
                         <svg xmlns="http://www.w3.org/2000/svg" onClick = {handleToggle} className="h-9 w-9 pr-1 md:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                         </svg> 

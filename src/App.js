@@ -8,19 +8,19 @@ import Board from './components/board/Board'
 const App = () => {
   return (
     <Router>
-      <div className="max-w-screen-xl border-2 mx-auto">
-        <div className="App font-inter text-gray-600 flex flex-col md:flex-row">
-          <div className="basis-2/6 w-full md:w-60 lg:basis-1/4 fixed">
+      <div className="max-w-screen-xl border-2 border-red-500 mx-auto">
+        <div className="App font-inter text-gray-600">
+          <div className="">
             <Navbar />
           </div>
-          <div className="content md:ml-60 md:w-2/3 basis-4/6 lg:basis-1/2">
+          <div className="">
             <Routes className="">
               <Route exact path='/' element={<Dashboard/>} />
               <Route path='/blog/:id' element={<BlogDetails />} />
               <Route path='/create' element={<CreateBlog />} />
             </Routes>
           </div>
-          <div className="basis-1/4 hidden lg:block">
+          <div className="">
             <Board />
           </div>
         </div>
