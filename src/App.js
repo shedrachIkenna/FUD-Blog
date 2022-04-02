@@ -13,7 +13,7 @@ const App = () => {
             <Navbar />
           </div>
           <div className="md:ml-64 -mt-16 md:mt-0 mx-auto lg:mr-[19.5rem]">
-            <Routes className="">
+            <Routes className=""> 
               <Route exact path='/' element={<Dashboard/>} />
               <Route path='/blog/:id' element={<BlogDetails />} />
               <Route path='/create' element={<CreateBlog />} />
