@@ -8,18 +8,19 @@ import Board from './components/board/Board'
 const App = () => {
   return (
     <Router>
-      <div className="App grid gap-3 lg:grid-cols-8 font-inter text-gray-600 max-w-screen-xl border-2 border-red-500 mx-auto">
-          <div className="lg:col-start-1 lg:col-end-3 md:col-start-1 md:col-end-4">
+      <div className="App font-inter text-gray-600 max-w-screen-xl border-2 border-red-500 mx-auto">
+          <div className="md:fixed md:top-auto md:right-auto md:w-64 border-yellow-500 border md:h-screen">
             <Navbar />
           </div>
-          <div className="lg:col-start-3 lg:col-end-7 md:col-start-4 md:col-end-9">
+          {/* max-w-3xl mx-auto pt-10 xl:max-w-none xl:ml-0 xl:mr-[15.5rem] xl:pr-16 */}
+          <div className="md:ml-64 mx-auto lg:mr-[19.5rem]">
             <Routes className="">
               <Route exact path='/' element={<Dashboard/>} />
               <Route path='/blog/:id' element={<BlogDetails />} />
               <Route path='/create' element={<CreateBlog />} />
             </Routes>
           </div>
-          <div className="lg:col-start-7 lg:col-end-9">
+          <div className="fixed lg:block border border-l-fuchsia-600 z-20 top-0 bottom-0 right-[max(0px,calc(50%-40rem))] w-[19.5rem]">
             <Board />
           </div>
       </div>
