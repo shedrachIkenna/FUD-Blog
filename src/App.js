@@ -14,13 +14,13 @@ const App = () => {
           <div className="md:fixed md:top-auto md:right-auto md:w-64 border-yellow-500 border md:h-screen">
             <Navbar />
           </div>
-          <div className="md:ml-64 -mt-16 md:mt-0 mx-auto lg:mr-[19.5rem]">
+          <div className="md:ml-64 mx-auto lg:mr-[19.5rem]">
             <Routes className=""> 
               <Route exact path='/' element={<Dashboard/>} />
               <Route path='/blog/:id' element={<BlogDetails />} />
               <Route path='/create' element={<CreateBlog />} />
               <Route path='/signin' element={<SignIn />} />
-              <Route path='/signout' element={<SignUp />} />
+              <Route path='/signup' element={<SignUp />} />
             </Routes>
           </div>
           <div className="hidden lg:fixed lg:block lg:border lg:border-l-fuchsia-600 lg:z-20 lg:top-0 lg:bottom-0 lg:right-[max(0px,calc(50%-40rem))] lg:w-[19.5rem]">
