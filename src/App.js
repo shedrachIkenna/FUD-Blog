@@ -12,8 +12,7 @@ const App = () => {
           <div className="md:fixed md:top-auto md:right-auto md:w-64 border-yellow-500 border md:h-screen">
             <Navbar />
           </div>
-          {/* max-w-3xl mx-auto pt-10 xl:max-w-none xl:ml-0 xl:mr-[15.5rem] xl:pr-16 */}
-          <div className="md:ml-64 mx-auto lg:mr-[19.5rem]">
+          <div className="md:ml-64 -mt-16 md:mt-0 mx-auto lg:mr-[19.5rem]">
             <Routes className="">
               <Route exact path='/' element={<Dashboard/>} />
               <Route path='/blog/:id' element={<BlogDetails />} />
