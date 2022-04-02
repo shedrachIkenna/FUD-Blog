@@ -20,7 +20,7 @@ const App = () => {
               <Route path='/create' element={<CreateBlog />} />
             </Routes>
           </div>
-          <div className="fixed lg:block border border-l-fuchsia-600 z-20 top-0 bottom-0 right-[max(0px,calc(50%-40rem))] w-[19.5rem]">
+          <div className="hidden lg:fixed lg:block lg:border lg:border-l-fuchsia-600 lg:z-20 lg:top-0 lg:bottom-0 lg:right-[max(0px,calc(50%-40rem))] lg:w-[19.5rem]">
             <Board />
           </div>
       </div>
