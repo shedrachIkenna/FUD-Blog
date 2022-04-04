@@ -2,6 +2,8 @@ import { NavLink } from 'react-router-dom'
 import { RiNotificationBadgeLine } from 'react-icons/ri'
 import SignedInLinks from '../signedinlinks/SignedInLinks'
 import SignedOutLinks from '../signedoutlinks/SignedOutLinks'
+import { connect } from 'react-redux'
+import { combineReducers } from 'redux'
 
 const Navbar = () => {
     const handleToggle = () => {
@@ -76,5 +78,12 @@ const Navbar = () => {
     )
 }
 
-export default Navbar 
+const mapStateToProps = (state) => {
+    console.log(state)
+    return {
+
+    }
+}
+
+export default connect(mapStateToProps)(Navbar) 
 
