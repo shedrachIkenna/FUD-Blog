@@ -1,15 +1,22 @@
 import React from 'react'
 import { useState } from 'react'
+import { connect } from 'react-redux'
+import { signIn } from '../../store/actions/authActions'
 
-const SignIn = () => {
+const SignIn = (props) => {
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(email, password)
+        console.log(props)
+        const creds = {email, password}
+        console.log(creds)
+        props.signIn(creds)
     }
+
+    const { authError } = props
 
     return (
         <div className="h-screen flex items-center justify-center">
@@ -31,15 +38,34 @@ const SignIn = () => {
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline pr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                             </svg>
-                            <input onChange={(e) => setPassword(e.target.value)} value={password} type="text" id="password" className="inline border-slate-800 outline-none text-xs"/>
+                            <input onChange={(e) => setPassword(e.target.value)} value={password} type="password" id="password" className="inline border-slate-800 outline-none text-xs"/>
                         </div>
                     </div>
                     <span><a href="/" className="mt-6 block text-center font-bold text-[10px]">Forgot password</a></span>
                     <button className="mt-10 block bg-purple-600 text-white w-full py-2 rounded-2xl px-8">Log in</button>
+                    <div className="text-red-500 text-xs pt-5 text-center">
+                        {
+                            authError ? <p>{authError}</p> : null
+                        }
+                    </div>
                 </form>
             </div>    
         </div>
     )
 }
 
-export default SignIn
+const mapStateToProps = (state) => {
+    return{
+        authError: state.auth.authError
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        signIn: (creds) => dispatch(signIn(creds))
+    }
+}
+
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(SignIn)

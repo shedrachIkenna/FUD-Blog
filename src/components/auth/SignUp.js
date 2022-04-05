@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+
 const SignOut = () => {
 
     const [email, setEmail] = useState('')
@@ -60,5 +61,6 @@ const SignOut = () => {
         </div>
     )
 }
+
 
 export default SignOut
