@@ -3,9 +3,11 @@ import { RiNotificationBadgeLine } from 'react-icons/ri'
 import SignedInLinks from '../signedinlinks/SignedInLinks'
 import SignedOutLinks from '../signedoutlinks/SignedOutLinks'
 import { connect } from 'react-redux'
-import { combineReducers } from 'redux'
 
-const Navbar = () => {
+const Navbar = (props) => {
+    const { auth } = props
+    // console.log(auth)
+    const links = auth.uid ? <SignedInLinks /> : <SignedOutLinks />
     const handleToggle = () => {
         const menu = document.getElementById("menu")
         menu.classList.toggle("hidden")
@@ -71,7 +73,7 @@ const Navbar = () => {
                     </div>
                 </div>
                 <div className="">
-                    <SignedInLinks />
+                    { links }
                 </div>
             </div>
         </div>   
@@ -79,9 +81,8 @@ const Navbar = () => {
 }
 
 const mapStateToProps = (state) => {
-    console.log(state)
     return {
-
+        auth: state.firebase.auth
     }
 }
 
